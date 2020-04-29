@@ -1,0 +1,157 @@
+/* global */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a,
+ul, li{
+	list-style: none;
+	text-decoration: none;
+	color: black;
+}
+
+/* Body */
+body {
+	font-family: Poppins, sans-serif;
+}
+
+
+/* header */
+
+/* Main */
+main {
+	width: 100%;
+	min-height: 90vh;
+	max-width: 1366px;
+	margin: 0 auto;
+	display: flex;
+}
+
+article {
+	overflow: hidden;
+	margin: 3rem;
+	background-color: white;
+	border-radius: 8px;
+	border: 1px solid red;
+	align-items: center;
+	display: flex;
+	max-width: 75vw;
+}
+
+.article-img img {
+		width: 30vw;
+}
+
+.article-post {
+	margin: 0 20px;
+	justify-content: space-between;
+}
+
+.post-date span {
+	font-size: 0.8rem;
+}
+
+/* Aside */
+.profile {
+	margin-top: 3rem;
+	background: white;
+	margin-right: 48px;
+	box-shadow: 0 4px 8px rgb(88, 88, 88, .2);
+}
+
+.profile img{
+	width: 15rem;
+	height: 15rem;
+	object-fit: cover;
+	border-radius: 0 0 50% 50%;
+	border: 2px solid rgb(182, 182, 182);
+}
+
+.profile-data h4{
+	font-size: 1.5rem;
+	color: #333;
+	margin: 0 0;
+	text-align: center;
+}
+
+.profile-data .job {
+	color: #777;
+	font-size: 1rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.profile-data .about {
+	font-size: .8rem;
+	margin: 1.5rem 0;
+	font-style: italic;
+	text-align: center;
+	color: #333;
+}
+
+.social-media {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1rem 0;
+	margin-top: 1.5rem;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.fa-facebook-square{
+	font-size: 1.5rem;
+	color: #3b5999;
+}
+
+.fa-twitter-square{
+	font-size: 1.5rem;
+	color: #3b5999;
+}
+
+.fa-instagram{
+	font-size: 1.5rem;
+	color: #3b5999;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover,
+.fa-instagram:hover{
+    color: salmon;
+}
+
+/* Footer */
+footer {
+	display: block;
+	background-color: white;
+ 	border-top: 1px solid #eee;
+	height: 55px;
+	padding: 20px 10%;
+	font-size: 12px;
+}
+
+.left-footer {
+float: left;
+}
+
+.left-footer a{
+	color: salmon;
+}
+
+.list-inline{
+	color: black;
+}
+
+.right-footer {
+float: right;
+}
+
+.list-inline-item {
+	display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+margin-right: 0.5rem;
+}
