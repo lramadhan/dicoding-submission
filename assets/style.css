@@ -19,6 +19,7 @@ body {
 
 
 /* header */
+
 nav .nav {
 	display: flex;
 	justify-content: space-between;
@@ -26,7 +27,14 @@ nav .nav {
 	box-shadow: 0 4px 16px rgb(48, 48, 48, .1);
 	align-items: center;
 	height: 64px;
+	width: 100%;
+	position: fixed;
 	padding: 0 50px;
+	z-index: 97;
+}
+
+nav .mobile-nav{
+	display: none;
 }
 
 .logo-container h3 {
@@ -67,6 +75,10 @@ main {
 	max-width: 1366px;
 	margin: 0 auto;
 	display: flex;
+}
+
+main #content {
+	margin-top: 50px;
 }
 
 article {
@@ -131,6 +143,9 @@ article:hover{
 }
 
 /* Aside */
+aside {
+	margin-top: 50px;
+}
 .profile {
 	margin-top: 3rem;
 	background: white;
@@ -260,7 +275,51 @@ margin-right: 0.5rem;
 		justify-content: center;
 		align-items: center;
 	}
+}
 
+@media screen and (max-width: 600px) {
+	main {
+		flex-direction: column;
+	}
+
+	.article-img img {
+		max-width: 81vw;
+	}
+
+	.nav .menu {
+		display: none;
+	}
+
+	nav .mobile-nav {
+		display: block;
+		z-index: 98;
+	}
+
+	.mobile-nav ul {
+		background-color: white;
+		border: 1px solid rgb(173, 173, 173, .3);
+	}
+
+	.mobile-nav li {
+		margin-top: 12px;
+	}
+
+	.menu button {
+		display: block;
+	}
+
+	aside .profile {
+		margin: 12px 48px;
+		justify-content: center;
+	}
+
+	.article-post img {
+		margin-left: 24px;
+	}
+
+	footer {
+		font-size: .7em;
+	}
 }
 
 @keyframes slide-in {
