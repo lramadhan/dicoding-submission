@@ -15,57 +15,42 @@ ul, li{
 /* Body */
 body {
 	font-family: Poppins, sans-serif;
+	overflow-x: hidden;
 }
 
 
 /* header */
-
-nav .nav {
+nav {
 	display: flex;
-	justify-content: space-between;
 	background-color: white;
-	box-shadow: 0 4px 16px rgb(48, 48, 48, .1);
+	justify-content: space-around;
+	padding: 18px 0;
+	box-shadow: 0 4px 8px rgba(116, 116, 116, 0.1);
 	align-items: center;
-	height: 64px;
+	height: 60px;
 	width: 100%;
 	position: fixed;
-	padding: 0 50px;
-	z-index: 97;
+	z-index: 99;
 }
 
-nav .mobile-nav{
-	display: none;
+nav .logo {
+	font-family: Caveat, cursive;
+	letter-spacing: 2px;
+	font-size: 32px;
 }
 
-.logo-container h3 {
-	font-size: 2em;
-	color: salmon;
+nav ul {
+	display: flex;
+	width: 40%;
+	justify-content: space-between;
 }
 
-.menu a {
+nav ul li a {
 	font-size: 1em;
-	color: rgb(21, 21, 21);
 }
 
-.menu a:hover {
+nav ul li a:hover {
 	color: salmon;
-}
-
-.nav .menu {
-	display: flex;
-	align-items: center;
-}
-
-.menu ul {
-	display: flex;
-}
-
-.menu ul li {
-	margin-right: 24px;
-}
-
-.menu button {
-	display: none;
 }
 
 /* Main */
@@ -79,6 +64,10 @@ main {
 
 main #content {
 	margin-top: 50px;
+}
+
+.menu-toggle {
+	display: none;
 }
 
 article {
@@ -283,34 +272,43 @@ margin-right: 0.5rem;
 	}
 
 	.article-img img {
-		max-width: 81vw;
-	}
-
-	.nav .menu {
-		display: none;
-	}
-
-	nav .mobile-nav {
-		display: block;
-		z-index: 98;
-	}
-
-	.mobile-nav ul {
-		background-color: white;
-		border: 1px solid rgb(173, 173, 173, .3);
-	}
-
-	.mobile-nav li {
-		margin-top: 12px;
-	}
-
-	.menu button {
-		display: block;
+		max-width: 387px;
 	}
 
 	aside .profile {
 		margin: 12px 48px;
 		justify-content: center;
+	}
+
+	.profile img {
+		margin-left: 75px;
+	}
+
+	.menu-toggle {
+		display: flex;
+		z-index: 99;
+		background-color: white;
+		border: 1px solid rgb(131, 131, 131);
+		border-radius: 5px;
+	}
+
+	nav ul {
+		position: absolute;
+		right: 0;
+		top: 0;
+		flex-direction: column;
+		background-color: white;
+		height: 100vh;
+		align-items: center;
+		justify-content: space-evenly;
+		z-index: 98;
+		width: 80%;
+		transform: translateX(100%);
+	}
+
+	nav ul.active {
+		transform: translateX(0);
+		animation: slide-right 2s ease;
 	}
 
 	.article-post img {
@@ -325,6 +323,17 @@ margin-right: 0.5rem;
 @keyframes slide-in {
 	0% {
 		transform: translateX(-50px);
+		opacity: .3;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-right {
+	0% {
+		transform: translateX(100%);
 		opacity: .3;
 	}
 
